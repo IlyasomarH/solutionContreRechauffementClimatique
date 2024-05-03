@@ -2,7 +2,7 @@
 
 <?php
     include_once('header.php')
-
+    
 
 ?>
 
@@ -13,13 +13,18 @@
 
 
 
-?>
+
 
 <table class='commente'>
     <tr>
         <th>Nom</th>
         <th>Avis</th>
-        <th>Action</th>
+       
+
+            <th>Action</th>
+
+
+   
     </tr>
 
 
@@ -39,16 +44,24 @@
                         if ($result) {
                             if (mysqli_num_rows($result) > 0) {
 
+                                // if($_SESSION['email']=='nimaH5828@gmail.com') {
+                                // while($row = mysqli_fetch_assoc($result)) {
+                                //     echo "<tr><td>".$row["nom"]."</td><td>".$row["avis"]."</td>     <td class='btn'> <button class='supp'>Supprimer   </button>    <button class='edit'>Modifier   </button>     </td></tr>\n";
+                                //    }
+                                //   }
+                                //   else{
 
-                                while($row = mysqli_fetch_assoc($result)) {
-                                    echo "<tr><td>".$row["nom"]."</td><td>".$row["avis"]."</td>     <td> <button class='supp'>Supprimer   </button>    <button class='edit'>Modifier   </button>     </td></tr>\n";
-                                   }
-                                  }
-                                 }
+                                    while($row = mysqli_fetch_assoc($result)) {
+                                        echo "<tr><td>".$row["nom"]."</td><td>".$row["avis"]."</td>  <td class='btn'> <button class='supp'>Supprimer   </button>    <button class='edit'>Modifier   </button>     </td> </tr>\n";
+
+                                    }
+                                //   }
+
+                                }
                                  
                                  // Fermer la connexion
                                  mysqli_close($connexion);
-                                }
+                                }}
                                 ?>
             
                

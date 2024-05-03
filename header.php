@@ -5,32 +5,62 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<link rel="stylesheet" href="style.css">
+
 <body>
+
+
+<?php  if($_SERVER['PHP_SELF']!=='/solutionContreRechauffementClimat/login.php'){  ?>
+
+
     <header>
         <div class="logo">
-            
+
+
+      
+
         </div>
         <nav>
 
-        <!-- <?php $_SESSION['username']="Taslim" ?> -->
+      
     
             <a href="index.php" class="active">acceuil</a>
-            <a href="login.php">connexion</a>
-            <a href="infos.php">actualité</a>
-            <a href="quiz.php">Quiz</a>
-            <a href="avis.php">Avis</a>
-            <a href="commentaire.php">commentaire</a>
 
 
-            <!-- <?php if ($_SESSION['username']=="Taslim" ) {
+         
+            <?php   if(internauteEstConnecte())  {    ?>
+
+    
+                        <a href="infos.php">actualité</a>
+                        <a href="login.php?action=deconnexion">deconnexion</a>
+
+                        <a href="quiz.php">Quiz</a>
+                        <a href="avis.php">Avis</a>
+                        <a href="commentaire.php">commentaire</a>
+            <?php  } else{
 
              ?>
 
-               <a href="admin.php">Admin</a>
-            
-            <?php }?> -->
+
+                <a href="login.php">connexion</a>
+
+
+
+
+
+
+              <?php  }  ?>  
+
+
+
+
+
+        
+           
+
+
+    
 
 
 
@@ -39,4 +69,15 @@
 
         
     </nav>
+
+
+
+
     </header>
+
+
+
+
+    <?php }   ?>
+
+   
