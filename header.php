@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 
 <body>
@@ -33,16 +34,17 @@
 
     
                         <a href="infos.php">actualité</a>
-                        <a href="login.php?action=deconnexion">deconnexion</a>
+                        
 
                         <a href="quiz.php">Quiz</a>
                         <a href="avis.php">Avis</a>
                         <a href="commentaire.php">commentaire</a>
+                        <a href="login.php?action=deconnexion">deconnexion</a>
             <?php  } else{
 
              ?>
 
-
+                <a href="Inscription.php">S'inscrire</a>
                 <a href="login.php">connexion</a>
 
 
@@ -69,6 +71,7 @@
 
         
     </nav>
+
 
 
 

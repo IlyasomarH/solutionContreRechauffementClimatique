@@ -3,6 +3,10 @@
             <img src="images/watsapp.png" alt="">
           <img src="images/gmail.png" alt=""> <img src="images/facebook.jpg" alt=""></p>
       </footer>
+
+
+
+      <script src="js/bootstrap.bundle.js"></script>
    
 </body>
 </html>

@@ -16,7 +16,7 @@ if(internauteEstConnecte())
 
 if($_POST)
 {
-    $resultat = executeRequete("SELECT * FROM utlisateur WHERE mail='$_POST[mail]'");
+    $resultat = executeRequete("SELECT * FROM utlisateur WHERE email='$_POST[email]'");
     if($resultat->num_rows != 0)
     {
         $membre = $resultat->fetch_assoc();
@@ -89,11 +89,12 @@ if($_POST)
   <div class="col">
 
 
-      <form method="POST" action="login.php">
-        <input type="email" name="mail"  placeholder="saisir votre email" required>
+      <form method="POST" action="login.php"  class="shadow w-50 mx-auto p-5 rounded-3">
+        <input type="email" name="email" class="label-control"  placeholder="saisir votre email" required>
 
-        <input type="password" name="mdp" placeholder="saisir pass word " required>
-        <button>Se connecter</button>
+        <input type="password" name="mdp" class="label-control" placeholder="saisir pass word " required>
+        <button class="btn btn-primary">Se connecter</button>
+        <a href="inscription.php">S'inscrire</a>
         </form>
 
 
